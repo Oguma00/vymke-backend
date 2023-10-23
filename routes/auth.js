@@ -14,7 +14,7 @@ router.post(
   ],
   async (req, res) => {
     try {
-      const { email, password, name } = req.body;
+      const { email, password, firstName,lastName,location,phone,bio } = req.body;
       const errors = validationResult(req);
       if (!errors.isEmpty()) {
         return res.status(400).json({ error: errors.array() });
@@ -30,9 +30,13 @@ router.post(
       const hashedPassword = await bcrypt.hash(password, 10);
       console.log(hashedPassword);
       const newUser = new User({
-        name,
+        firstName,
+        lastName,
         email,
         password: hashedPassword,
+        phone,
+        bio,
+        location,
       });
       const savedUser = await newUser.save();
       const token = await jwt.sign(
