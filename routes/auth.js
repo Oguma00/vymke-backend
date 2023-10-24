@@ -41,10 +41,11 @@ router.post(
         documents,
       });
       const savedUser = await newUser.save();
+
       const token = await jwt.sign(
         {
           id: savedUser._id,
-          email: savedUser.email,
+          email: savedUser.email
         },
         process.env.JWT_SIGN,
         { expiresIn: "3d" }
