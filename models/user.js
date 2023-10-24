@@ -8,7 +8,7 @@ const userSchema=new mongoose.Schema({
     location:{type:String,required:true},
     bio:{type:String,required:true},
     documents:{type:Array},
-    isFundi:{type:String}
+    isFundi:{type:String,default:false}
 
 })
 module.exports=mongoose.model("User",userSchema) 
