@@ -27,8 +27,9 @@ router.post(
           },
         });
       }
+
       const hashedPassword = await bcrypt.hash(password, 10);
-      console.log(hashedPassword);
+      console.log("Hashed Password", hashedPassword);
       const newUser = new User({
         firstName,
         lastName,
@@ -49,9 +50,9 @@ router.post(
         { expiresIn: "3d" }
       );
 
-      console.log(token);
+      console.log("Token",token);
 
-      res.status(200).json(savedUser);
+      res.status(201).json(savedUser);
     } catch (error) {
       res.status(400).json({ error });
     }
