@@ -14,7 +14,7 @@ router.post(
   ],
   async (req, res) => {
     try {
-      const { email, password, firstName,lastName,location,phone,bio,documents,isFundi} = req.body;
+      const { email, password, firstName,lastName,location,phone,bio,documents,isFundi,image} = req.body;
       const errors = validationResult(req);
       if (!errors.isEmpty()) {
         return res.status(400).json({ error: errors.array() });
@@ -40,6 +40,7 @@ router.post(
         location,
         documents,
         isFundi,
+        image,
       });
       const savedUser = await newUser.save();
 
