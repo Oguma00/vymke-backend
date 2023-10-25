@@ -6,4 +6,4 @@ const postSchema=new mongoose.Schema({
     fundiAuthor:{type:String,required:true},
 
 })
-module.exports=mongoose.model("Fundi", postSchema)
+module.exports=mongoose.model("post", postSchema)
