@@ -5,7 +5,7 @@ const userSchema=new mongoose.Schema({
     email:{type:String,required:true},
     password:{type:String,required:true},
     phone:{type:String},
-    location:{type:String,required:true},
+    location:{type:String},
     bio:{type:String},
     documents:{type:Array},
     isFundi:{type:String,default:false}
