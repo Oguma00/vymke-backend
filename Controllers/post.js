@@ -1,10 +1,14 @@
 const Post = require("../models/post");
 const addPost = async (req, res) => {
   try {
-    const { postImg, postCategory } = req.body;
+    const { postImg, postContact, postName, postBooking, postProfession, } = req.body;
     const newPost = new Post({
       postImg,
-      postCategory,
+      postContact,
+      postProfession,
+      postBooking,
+      postName,
+  
     });
     const savedPost = await newPost.save();
     res.status(201).json(savedPost);
