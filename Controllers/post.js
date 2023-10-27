@@ -18,8 +18,8 @@ const addPost = async (req, res) => {
 
 const getPosts = async (req, res) => {
   try {
-    const Posts = await Posts.find();
-    res.status(200).json(Posts);
+    const posts = await Post.find();
+    res.status(200).json(posts);
   } catch (error) {
     res.status(404).json(error);
   }

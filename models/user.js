@@ -9,7 +9,8 @@ const userSchema=new mongoose.Schema({
     bio:{type:String},
     documents:{type:Array},
     isFundi:{type:String,default:false},
-    image:{type:String}
+    image:{type:String},
+    proffession:{type:String},
 
 })
 module.exports=mongoose.model("User",userSchema) 
