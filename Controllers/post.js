@@ -1,13 +1,14 @@
 const Post = require("../models/post");
 const addPost = async (req, res) => {
   try {
-    const { postTittle,postDescription,  postProffession,postName,postPrice } = req.body;
+    const { postTittle,postDescription,  postProffession,userId,postPrice } = req.body;
     const newPost = new Post({
       postTittle,
       postProffession,
       postDescription,
-      postName,
+      // postName,
       postPrice,
+      userId
       
   
     });
