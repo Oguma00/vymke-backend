@@ -29,6 +29,10 @@ const addPost = async (req, res) => {
       postDescription:req.body.postDescription,
       postPrice:req.body.postPrice,
       userId:user,
+      postName:req.body.postName,
+
+
+
       
     });
     const savedPost = await newPost.save();
