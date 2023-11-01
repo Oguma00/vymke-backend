@@ -5,12 +5,13 @@ const { model } = require("mongoose");
 const User = require("../models/user");
 const router = require("express").Router();
 const {
-  updateUser,
+  updatedUser,
 } = require("../Controllers/user");
 const Post = require("../models/user");
 const express = require("express");
-// Patch single User
-router.patch("/update/:id", updateUser);
+
+// update single User
+router.patch("/update/:id", updatedUser);
 
 
 

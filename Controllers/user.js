@@ -4,7 +4,6 @@ const User = require("../models/user");
 const updatedUser = async (req, res) => {
     try {
       const id = req.params.id;
-      const opition = { new: true };
       const updatedUser = await User.findByIdAndUpdate(id, req.body, {
         new: true,
       });
@@ -14,3 +13,4 @@ const updatedUser = async (req, res) => {
     }
   };
   
+  module.exports = {updatedUser}
