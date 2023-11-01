@@ -7,7 +7,7 @@ const postSchema = new mongoose.Schema({
   postDescription: { type: String, required: true },
   postName: { type: String, required: true },
   postPrice: { type: String, required: true },
-  postImage: { type: String, required: true },
+  postImage: { type: String},
   userId:{
     type:mongoose.Schema.Types.ObjectId,
     ref:User
