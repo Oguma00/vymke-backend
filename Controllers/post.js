@@ -28,6 +28,7 @@ const addPost = async (req, res) => {
       postProffession:req.body.postProffession,
       postDescription:req.body.postDescription,
       postPrice:req.body.postPrice,
+      postImage:req.body.postImage,
       userId:user,
       postName:req.body.postName,
 
