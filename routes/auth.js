@@ -4,6 +4,18 @@ const { check, validationResult } = require("express-validator");
 const { model } = require("mongoose");
 const User = require("../models/user");
 const router = require("express").Router();
+const {
+  updateUser,
+} = require("../Controllers/user");
+const Post = require("../models/user");
+const express = require("express");
+// Patch single User
+router.patch("/update/:id", updateUser);
+
+
+
+
+
 // signup
 router.post(
   "/signup",
@@ -108,5 +120,10 @@ router.post(
       res.status(200).json(user);
     } catch (error) {}
   }
+  // user update
+  
+
+
+  
 );
 module.exports = router;
